@@ -29,7 +29,7 @@
     align-items: center;
     flex-wrap: wrap;
     border-bottom: 0.2px solid rgba(35, 35, 48, 0.111);
-    padding: 10px 10px;
+    padding: 20px;
   }
 
   header > div {
