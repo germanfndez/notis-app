@@ -1,6 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 	import { fly } from 'svelte/transition';
+  
   export let id;
   export let title;
   export let body;
@@ -82,8 +83,9 @@
 <style>
   article {
     box-sizing: border-box;
-    max-width: 350px;
+    max-width: 400px;
     height: 300px;
+    width: 100%;
     border-radius: 6px;
     padding: 0 15px;
   }

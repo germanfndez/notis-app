@@ -14,8 +14,9 @@
     align-items: center;
     background-color: transparent;
     border:  dotted 4px rgb(160, 160, 160);
-    width: 350px;
-    height: 295px;
+    max-width: 400px;
+    height: 300px;
+    width: 100%;
     border-radius: 6px;
     color: rgb(116, 115, 115);
     transition: all 0.2s ease-in-out;
