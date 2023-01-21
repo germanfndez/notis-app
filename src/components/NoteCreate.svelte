@@ -22,12 +22,14 @@
     transition: all 0.2s ease-in-out;
   }
 
-  button:hover {
-    background-color: rgb(196, 214, 247);
-    border:  dotted 4px rgb(34, 104, 235);
-    color: rgb(34, 104, 235);
+  @media (hover: hover) and (pointer: fine) {
+    button:hover {
+      background-color: rgb(196, 214, 247);
+      border:  dotted 4px rgb(34, 104, 235);
+      color: rgb(34, 104, 235);
+    }
   }
-
+  
   button > svg {
     width: 80px;
     height: 80px;

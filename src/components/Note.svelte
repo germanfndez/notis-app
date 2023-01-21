@@ -142,25 +142,26 @@
     stroke-width: 2.0;
   }
 
-  button > svg:hover {
-    stroke: var(--color-blue);
-  }
+  @media (hover: hover) and (pointer: fine) {
+    button > svg:hover {
+      stroke: var(--color-blue);
+    }
 
-  button.delete > svg:hover {
-    stroke: rgb(124, 26, 26);
+    button.delete > svg:hover {
+      stroke: rgb(124, 26, 26);
+    }
+
+    button.accept > svg:hover {
+      stroke: rgb(17, 102, 43);
+    }
+
+    button.decline > svg:hover {
+      stroke: rgb(124, 26, 26);
+    }
   }
 
   button.deleting > svg {
     stroke: var(--color-blue);
   }
-
-  button.accept > svg:hover {
-    stroke: rgb(17, 102, 43);
-  }
-
-  button.decline > svg:hover {
-    stroke: rgb(124, 26, 26);
-  }
-  
  
 </style>
