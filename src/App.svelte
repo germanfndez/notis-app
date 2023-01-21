@@ -4,7 +4,6 @@
   import { getRandomColor } from "./utils/getRandomColor.js";
 
   let notes = JSON.parse(localStorage.getItem("notes")) || [];
-
   let filteredNotes = notes;
 
   function handleNew() {
@@ -43,13 +42,14 @@
     }
     filteredNotes = notes.filter(note => note.title.includes(query) || note.body.includes(query));
   }
-
+  
   $: localStorage.setItem("notes", JSON.stringify(notes));
-
+  $: filteredNotes = notes;
+  
 </script>
 
 <Header on:search={handleSearch}/>
-<NotesGrid notes={notes} on:click={handleNew} on:edit={handleEdit} on:delete={handleDelete} />
+<NotesGrid notes={filteredNotes} on:click={handleNew} on:edit={handleEdit} on:delete={handleDelete} />
 
 
 <style>
