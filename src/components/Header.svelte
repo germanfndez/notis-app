@@ -49,11 +49,13 @@
   }
 
   input {
-    border: 1px solid #ccc;
-    padding: 10px 5px;
+    outline: 2px solid rgba(35, 35, 48, 0.651);
+    border: 0;
+    margin-left: 5px;
+    padding: 8px;
     border-radius: 6px;
     width: 350px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.1s ease-out;    
   }
 
