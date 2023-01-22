@@ -1,13 +1,14 @@
 <script>
-  import Note from "./Note.svelte";
-  import NoteCreate from "./NoteCreate.svelte";
-  export let notes;
+  import Note from './Note.svelte'
+  import NoteCreate from './NoteCreate.svelte'
+
+  export let notes
 </script>
 
 <section>
-  <NoteCreate on:click/>
-  {#each notes as {title, body, color, id} (id)}
-    <Note {id} {title} {body} {color} on:edit on:delete/>
+  <NoteCreate on:click />
+  {#each notes as { title, body, color, id } (id)}
+    <Note {id} {title} {body} {color} on:edit on:delete />
   {/each}
 </section>
 
@@ -20,6 +21,4 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 350px));
   }
-
-
 </style>

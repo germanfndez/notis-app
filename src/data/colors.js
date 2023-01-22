@@ -8,5 +8,5 @@ export default [
   '#F0FFFF',
   '#F0E68C',
   '#E6E6FA',
-  '#FF69B4',
-];
+  '#FF69B4'
+]

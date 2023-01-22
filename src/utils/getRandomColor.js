@@ -1,10 +1,10 @@
-import colors from '../data/colors.js';
+import colors from '../data/colors.js'
 
-let index = 0;
+let index = 0
 
 export const getRandomColor = () => {
   if (index === colors.length) {
-    index = 0;
+    index = 0
   }
-  return colors[index++];
-};
+  return colors[index++]
+}
