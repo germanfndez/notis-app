@@ -1,4 +1,8 @@
-<button on:click aria-label="Create new note">
+<script>
+  import { newNote } from '../stores/notes.js'
+</script>
+
+<button on:click={newNote} aria-label="Create new note">
   <svg
     fill="none"
     stroke="currentColor"

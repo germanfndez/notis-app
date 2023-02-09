@@ -1,14 +1,16 @@
 <script>
+  import { filteredNotes, notes } from '../stores/notes.js'
   import Note from './Note.svelte'
   import NoteCreate from './NoteCreate.svelte'
 
-  export let notes
+  $: localStorage.setItem('notes', JSON.stringify($notes))
+  $: $filteredNotes = $notes
 </script>
 
 <section>
   <NoteCreate on:click />
-  {#each notes as { title, body, color, id } (id)}
-    <Note {id} {title} {body} {color} on:edit on:delete />
+  {#each $filteredNotes as { title, body, color, id } (id)}
+    <Note {id} {title} {body} {color} />
   {/each}
 </section>
 

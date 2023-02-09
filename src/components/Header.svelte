@@ -1,12 +1,8 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
-
-  const dispatch = createEventDispatcher()
+  import { filterNotes } from '../stores/notes.js'
 
   function handleSearch(event) {
-    dispatch('search', {
-      query: event.target.value
-    })
+    filterNotes(event.target.value)
   }
 </script>
 

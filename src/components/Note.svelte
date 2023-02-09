@@ -1,6 +1,6 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
   import { fly } from 'svelte/transition'
+  import { deleteNote, editNote } from '../stores/notes.js'
 
   export let id
   export let title
@@ -9,10 +9,8 @@
 
   let deleting = false
 
-  const dispatch = createEventDispatcher()
-
   function handleChange(event) {
-    dispatch('edit', {
+    editNote({
       id,
       title,
       body,
@@ -21,9 +19,7 @@
   }
 
   function handleDelete() {
-    dispatch('delete', {
-      id
-    })
+    deleteNote(id)
   }
 
   function handleDeletingMode() {
